@@ -1,0 +1,62 @@
+---
+import imageAbout from "../assets/about.jpg";
+---
+
+<section id="about" class="bg-hp-200 py-12 lg:py-24">
+  <div class="container mx-auto px-4 lg:px-0">
+    <div class="grid lg:grid-cols-2 lg:gap-16">
+      <!-- image -->
+      <div class="mb-9 lg:mb-0">
+        <img
+          src={imageAbout.src}
+          alt="HappyPartner"
+          class="w-full rounded-xl"
+        />
+      </div>
+      <!-- text -->
+      <div>
+        <!-- uptitle -->
+        <div class="flex items-center gap-3 mb-4">
+          <div class="size-[12px] relative flex items-center justify-center">
+            <div class="absolute size-full bg-orange-500 rounded-full z-10">
+            </div>
+          </div>
+          <p class="font-display text-sm text-orange-500 font-light lg:text-lg">
+            Quienes Somos
+          </p>
+        </div>
+        <!-- title -->
+        <h2 class="text-orange-500 font-display text-3xl font-semibold mb-4 lg:text-4xl">
+          ¡Somos tus <span class="gradient-word">partner</span> en <span
+            class="gradient-word">felicidad</span
+          > organizacional!
+        </h2>
+        <!-- text -->
+        <p class="font-sora text-md font-medium mb-6">
+          +20 años de experiencia en gestión de personas, administración y
+          docencia. Creemos que el bienestar es una necesidad estratégica para
+          atraer y retener talento y construir organizaciones sostenibles.
+        </p>
+        <!-- listServices -->
+        <ul>
+          <li class="block border-b py-3 border-black/10">
+            <h3 class="text-orange-500 text-lg font-semibold">
+              Bienestar Organizacional
+            </h3>
+          </li>
+          <li class="block border-b py-3 border-black/10">
+            <h3 class="text-orange-500 text-lg font-semibold">Talleres</h3>
+          </li>
+          <li class="block border-b py-3 border-black/10">
+            <h3 class="text-orange-500 text-lg font-semibold">Charlas</h3>
+          </li>
+          <li class="block border-b py-3 border-black/10">
+            <h3 class="text-orange-500 text-lg font-semibold">
+              Coaching grupal e individual
+            </h3>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
