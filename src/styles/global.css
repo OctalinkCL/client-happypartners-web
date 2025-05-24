@@ -5,6 +5,7 @@
 @theme {
   --color-hp-200: #f9f4e2;
   --font-display: "Bricolage Grotesque", "sans-serif";
+  --font-sora: "Sora", sans-serif;
 }
 
 .gradient-word {
