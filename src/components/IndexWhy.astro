@@ -115,16 +115,20 @@
   // Script para la lógica del slider
   document.addEventListener("DOMContentLoaded", () => {
     const sliderContainer = document.querySelector(".slider-container");
+    if (!sliderContainer) return;
+    
     const slides = Array.from(sliderContainer.querySelectorAll(".slide"));
     const dotsContainer = sliderContainer.querySelector(".dots-container");
+    if (!dotsContainer) return;
+    
     const dots = Array.from(dotsContainer.querySelectorAll(".dot"));
 
     let currentIndex = 0;
-    let autoPlayInterval;
+    let autoPlayInterval: NodeJS.Timeout;
     const intervalTime = 3000; // Cambia cada 3 segundos (3000 ms)
 
     // Función para mostrar la slide actual
-    function showSlide(index) {
+    function showSlide(index: number) {
       // Oculta todas las slides y desactiva todos los dots
       slides.forEach((slide) => slide.classList.remove("active"));
       dots.forEach((dot) => dot.classList.remove("active"));
@@ -154,7 +158,7 @@
     // Manejar clics en los dots
     dots.forEach((dot) => {
       dot.addEventListener("click", () => {
-        const index = parseInt(dot.dataset.index);
+        const index = parseInt((dot as HTMLElement).dataset.index || "0");
         stopAutoPlay(); // Detiene el autoplay al interactuar
         showSlide(index);
         startAutoPlay(); // Reinicia el autoplay
