@@ -13,7 +13,10 @@
           </p>
         </div>
         <!-- title -->
-        <h2 class="text-white text-3xl font-display font-semibold lg:text-6xl">
+        <h2
+          class="text-white text-3xl font-display font-semibold lg:text-6xl"
+          id="pTitle"
+        >
           La <span class="gradient-word lila">felicidad</span> en el trabajo es posible
           y <span class="gradient-word lila">rentable</span>.
         </h2>
@@ -22,6 +25,7 @@
       <div class="lg:pt-6">
         <p
           class="text-white font-sora text-lg font-medium lg:text-3xl leading-[1.5]"
+          id="pText"
         >
           Impulsamos culturas organizacionales más humanas, conscientes y
           felices, promoviendo el bienestar como motor estratégico de
@@ -31,3 +35,12 @@
     </div>
   </div>
 </section>
+
+<script>
+  import { animateFromX } from "../assets/animate.js";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    animateFromX("#pTitle");
+    animateFromX("#pText", {delay: 0.3});
+  });
+</script>
