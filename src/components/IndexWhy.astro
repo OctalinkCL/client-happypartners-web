@@ -1,16 +1,16 @@
-<section id="why" class="py-12 bg-slate-950 lg:py-24">
+<section id="why" class="py-12 bg-midnight lg:py-24">
   <div class="container mx-auto px-4 lg:px-0">
     <div class="flex flex-col justify-center items-center">
       <div class="flex items-center gap-3 mb-4">
         <div class="size-[12px] relative flex items-center justify-center">
-          <div class="absolute size-full bg-orange-500 rounded-full z-10"></div>
+          <div class="absolute size-full bg-lila rounded-full z-10"></div>
         </div>
-        <p class="font-display text-sm text-orange-500 font-light lg:text-lg">
+        <p class="font-display text-sm text-lila font-light lg:text-lg">
           ¿Por qué medir la felicidad?
         </p>
       </div>
 
-      <div class="slider-container text-white text-center ">
+      <div class="slider-container text-white text-center">
         <div id="phraseSlider" class="slider h-[150px]">
           <div class="slide" data-index="0">
             <h3 class="text-4xl font-display font-semibold lg:text-6xl">
@@ -116,11 +116,11 @@
   document.addEventListener("DOMContentLoaded", () => {
     const sliderContainer = document.querySelector(".slider-container");
     if (!sliderContainer) return;
-    
+
     const slides = Array.from(sliderContainer.querySelectorAll(".slide"));
     const dotsContainer = sliderContainer.querySelector(".dots-container");
     if (!dotsContainer) return;
-    
+
     const dots = Array.from(dotsContainer.querySelectorAll(".dot"));
 
     let currentIndex = 0;
