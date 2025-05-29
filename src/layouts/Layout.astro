@@ -1,5 +1,7 @@
 ---
 import Footer from "./Footer.astro";
+const currentPath = new URL(Astro.request.url).pathname;
+const isHome = currentPath !== '/';
 ---
 
 <!doctype html>
@@ -24,7 +26,8 @@ import Footer from "./Footer.astro";
     <slot />
 
     <!-- footer -->
-    <Footer />
+    {isHome && <Footer />}
+    
 
     <script>
       import { activateOnScroll } from "../assets/animate.js";
