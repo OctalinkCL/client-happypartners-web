@@ -1,35 +1,25 @@
 ---
 import videoHero from "../assets/video_hero.mp4";
+import background from "../assets/bg.webp";
 ---
 
-<section class="bg-hp-200 pt-12">
+<section id="hero">
   <!-- top -->
-  <div class="px-4 container mx-auto pb-8 lg:pb-32 lg:px-0">
-    <!-- uptitle -->
-    <div class="flex items-center gap-3 mb-4">
-      <div class="size-[12px] relative flex items-center justify-center">
-        <div class="absolute size-full bg-amber-500 rounded-full z-10"></div>
-      </div>
-      <p class="font-display text-sm text-amber-500 font-light lg:text-lg">
-        Available for new projects
-      </p>
+  <div class="bg-lila hero-top bg-cover">
+    <div class="container mx-auto px-4 pt-16 pb-40">
+      <h1 class="font-display font-medium text-4xl text-center text-deeplum">
+        ¿Puedes identificar cómo se<span>siente trabajar</span>en tu
+        organización... y <span>cómo te gustaría</span> que se <span
+          >sintiera</span
+        >?
+      </h1>
     </div>
-    <!-- title -->
-    <h1
-      id="hTitle"
-      class="text-4xl font-semibold font-display pr-3 text-mango leading-[1.2] lg:text-7xl"
-    >
-      ¿Puedes identificar cómo se <span class="gradient-word amber"
-        >siente trabajar</span
-      > en tu organización... y <span class="gradient-word amber"
-        >cómo te gustaría que se sintiera?</span
-      >
-    </h1>
   </div>
-
   <!-- bottom -->
-  <div class="bg-linear-to-t from-deeplum from-75% to-hp-200 to-75%">
-    <div class="px-4 container mx-auto lg:px-0">
+  <div
+    class="-mt-24 bg-linear-to-t from-deeplum from-53% to-indigo-500/0 to-53%"
+  >
+    <div class="container mx-auto px-4">
       <video
         src={videoHero}
         autoplay
@@ -41,10 +31,8 @@ import videoHero from "../assets/video_hero.mp4";
   </div>
 </section>
 
-<!-- <script>
-  import { scrambleText } from "../assets/animate.js";
-
-  document.addEventListener("DOMContentLoaded", () => {
-    scrambleText("#hTitle");
-  });
-</script> -->
+<style>
+  .hero-top {
+    background-image: url(../assets/bg.webp);
+  }
+</style>

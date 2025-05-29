@@ -24,3 +24,8 @@
 .gradient-word.lila {
   @apply from-lila/30 to-lila/0;
 }
+
+/* Hero */
+#hero h1 span {
+  @apply bg-deeplum text-white inline-block px-3.5 rounded-full my-1 font-semibold;
+}
