@@ -1,7 +1,10 @@
 import { gsap } from "gsap";
+import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 
+
+gsap.registerPlugin(SplitText);
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrambleTextPlugin)
 
@@ -27,5 +30,24 @@ export function scrambleText(selector) {
     gsap.to(element, {
         duration: 3,
         scrambleText: "¿Puedes identificar cómo se siente trabajar en tu organización... y cómo te gustaría que se sintiera?"
+    });
+}
+
+
+export function heroSplitText(selector) {
+    const element = document.querySelector(selector);
+    if (!element) return;
+
+    document.fonts.ready.then(() => {
+        gsap.set(element, { opacity: 1 });
+
+        const split = SplitText.create(element, { type: "words", aria: "hidden" });
+
+        gsap.from(split.words, {
+            opacity: 0,
+            duration: 0.3,
+            ease: "sine.out",
+            stagger: 0.1,
+        });
     });
 }

@@ -1,15 +1,24 @@
 ---
 import videoHero from "../assets/video_hero.mp4";
-import background from "../assets/bg.webp";
 ---
+
+<script>
+  import { heroSplitText } from "../assets/animate.js";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    heroSplitText("#hTitle");
+  });
+</script>
 
 <section id="hero">
   <!-- top -->
   <div class="bg-lila hero-top bg-cover">
-    <div class="container mx-auto px-4 pt-16 pb-40">
-      <h1 class="font-display font-medium text-4xl text-center text-deeplum">
-        ¿Puedes identificar cómo se<span>siente trabajar</span>en tu
-        organización... y <span>cómo te gustaría</span> que se <span
+    <div class="mx-auto px-4 pt-16 pb-40 | lg:pt-32 lg:pb-96 container" id="hTitle">
+      <h1
+        class="font-display font-medium text-4xl text-center text-deeplum | lg:text-8xl"
+      >
+        ¿Puedes identificar cómo se<span>siente</span> trabajaren tu
+        organización... y cómo te gustaría que se <span
           >sintiera</span
         >?
       </h1>
@@ -17,16 +26,16 @@ import background from "../assets/bg.webp";
   </div>
   <!-- bottom -->
   <div
-    class="-mt-24 bg-linear-to-t from-deeplum from-53% to-indigo-500/0 to-53%"
+    class="-mt-24 bg-linear-to-t from-deeplum from-53% to-indigo-500/0 to-53% | lg:-mt-64"
   >
-    <div class="container mx-auto px-4">
+    <div class="mx-auto px-4 | md:w-2/3 md:pb-10">
       <video
         src={videoHero}
         autoplay
         muted
         loop
         playsinline
-        class="w-full h-full object-cover rounded-xl lg:h-96"></video>
+        class="w-full h-full object-cover rounded-xl lg:h-[500px] shadow-lg shadow-black/12"></video>
     </div>
   </div>
 </section>
