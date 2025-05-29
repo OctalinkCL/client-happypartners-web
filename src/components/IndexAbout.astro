@@ -1,12 +1,23 @@
 ---
+import { map } from "astro:schema";
 import imageAbout from "../assets/about.jpg";
+
+const text =
+  "Con más de 20 años de experiencia como ingenieros comerciales en administración, gestión de recursos humanos y docencia, somos conscientes del enorme poder de la felicidad y el bienestar en el universo corporativo.";
+
+const services = [
+  "Bienestar Organizacional",
+  "Talleres",
+  "Charlas",
+  "Cooaching grupal e individual",
+];
 ---
 
-<section id="about" class="bg-hp-200 py-12 lg:py-24">
+<section id="about" class="bg-hp-200 py-12 lg:py-24 bg-cover">
   <div class="container mx-auto px-4 lg:px-0">
-    <div class="grid lg:grid-cols-2 lg:gap-16">
+    <div class="grid lg:grid-cols-7 lg:gap-16">
       <!-- image -->
-      <div class="mb-9 lg:mb-0">
+      <div class="mb-9 lg:mb-0 col-span-3">
         <img
           src={imageAbout.src}
           alt="HappyPartner"
@@ -14,46 +25,61 @@ import imageAbout from "../assets/about.jpg";
         />
       </div>
       <!-- text -->
-      <div>
+      <div class="col-span-4">
         <!-- uptitle -->
-        <div class="flex items-center gap-3 mb-4">
-          <div class="size-[12px] relative flex items-center justify-center">
-            <div class="absolute size-full bg-deeplum rounded-full z-10"></div>
+        <div>
+          <div class="text-deeplum inline-block italic font-semibold text-xl mb-4">
+            "Bienestar es la nueva lovemark: emociones que fidelizan."
           </div>
-          <p class="font-display text-sm text-deeplum font-light lg:text-lg">
-            Quienes Somos
-          </p>
         </div>
         <!-- title -->
         <h2
-          class="text-orange-500 font-display text-3xl font-semibold mb-4 lg:text-4xl"
+          class="text-orange-500 font-display text-3xl font-semibold mb-4 lg:text-5xl"
         >
           ¡Somos tus <span class="gradient-word amber">partner</span> en <span
             class="gradient-word amber">felicidad</span
           > organizacional!
         </h2>
         <!-- text -->
-        <p class="font-sora text-md font-medium mb-6">
-          +20 años de experiencia en gestión de personas, administración y
-          docencia. Creemos que el bienestar es una necesidad estratégica para
-          atraer y retener talento y construir organizaciones sostenibles.
-        </p>
+        <div class="font-sora text-md text-deeplum font-medium mb-6 grid gap-3">
+          <p>{text}</p>
+          <p class="">
+            Desarrollamos estrategias para mantener altos niveles de felicidad
+            en los colaboradores de una organización, así como también, atraer y
+            retener el talento mediante estrategias enfocadas desde el
+            bienestar.
+          </p>
+          <p>
+            El bienestar corporativo ha dejado de ser una tendencia, para
+            convertirse en una necesidad inexcusable en las empresas. Las nuevas
+            generaciones demandan una forma de liderazgo basada en el ser
+            humano, que respete unos valores de plenitud personal y
+            sostenibilidad.
+          </p>
+          <p>
+            El bienestar es la nueva LOVEMARK, la forma de crear un modelo de
+            empresa a la altura de sus colaboradores, qué a su vez, haga crecer
+            a nuestra sociedad.
+          </p>
+        </div>
+
         <!-- listServices -->
-        <ul class="text-midnight">
-          <li class="block border-b py-3 border-black/10">
-            <h3 class="text-lg font-semibold">Bienestar Organizacional</h3>
-          </li>
-          <li class="block border-b py-3 border-black/10">
-            <h3 class="text-lg font-semibold">Talleres</h3>
-          </li>
-          <li class="block border-b py-3 border-black/10">
-            <h3 class="text-lg font-semibold">Charlas</h3>
-          </li>
-          <li class="block border-b py-3 border-black/10">
-            <h3 class="text-lg font-semibold">Coaching grupal e individual</h3>
-          </li>
+        <ul class="text-deeplum flex flex-wrap gap-3 font-semibold">
+          {
+            services.map((item) => (
+              <li class="text-lg bg-hp-200 px-6 py-2 rounded-4xl border-6 border-mango lg:text-xl">
+                {item}
+              </li>
+            ))
+          }
         </ul>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  #about {
+    background-image: url(../assets/bg_about_alt.webp);
+  }
+</style>

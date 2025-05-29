@@ -3,7 +3,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-hp-200: #f9f4e2;
+  --color-hp-200: #F7EFDE;
   --font-display: "Bricolage Grotesque", "sans-serif";
   --font-sora: "Sora", sans-serif;
   --color-deeplum: #482F57;
@@ -14,11 +14,11 @@
 }
 
 .gradient-word {
-  @apply border-l-4 rounded pl-1 pr-2 bg-linear-to-r;
+  @apply rounded-full px-3;
 }
 
 .gradient-word.amber {
-  @apply from-amber-500/30 to-amber-500/0;
+  @apply bg-sunset text-white;
 }
 
 .gradient-word.lila {

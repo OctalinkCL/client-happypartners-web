@@ -1,6 +1,13 @@
+---
+const subheader = "Queremos un mundo más consciente y feliz.";
+const text1 =
+  "Impulsamos culturas organizacionales más humanas, conscientes y felices, promoviendo el bienestar laboral y personal como motor estratégico de transformación.";
+const text2 = "La felicidad en el trabajo es posible y rentable.";
+---
+
 <section id="purpose" class="py-12 bg-deeplum lg:py-24">
   <div class="container mx-auto px-4 lg:px-0">
-    <div class="grid lg:grid-cols-2 lg:gap-16">
+    <div class="grid lg:grid-cols-1 lg:gap-2">
       <!-- left -->
       <div class="mb-5">
         <!-- uptitle -->
@@ -9,27 +16,24 @@
             <div class="absolute size-full bg-lila rounded-full z-10"></div>
           </div>
           <p class="font-display text-sm text-lila font-light lg:text-lg">
-            Nuestro Propósito
+            {subheader}
           </p>
         </div>
         <!-- title -->
         <h2
-          class="text-white text-3xl font-display font-semibold lg:text-6xl"
+          class="text-white text-3xl font-display font-semibold lg:text-6xl it"
           id="pTitle"
         >
-          La <span class="gradient-word lila">felicidad</span> en el trabajo es posible
-          y <span class="gradient-word lila">rentable</span>.
+          {text1}
         </h2>
       </div>
       <!-- right -->
       <div class="lg:pt-6">
         <p
-          class="text-white font-sora text-lg font-medium lg:text-3xl leading-[1.5]"
+          class="text-lila font-sora text-lg font-medium lg:text-3xl leading-[1.5] italic"
           id="pText"
         >
-          Impulsamos culturas organizacionales más humanas, conscientes y
-          felices, promoviendo el bienestar como motor estratégico de
-          transformación.
+          {text2}
         </p>
       </div>
     </div>
@@ -41,6 +45,6 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     animateFromX("#pTitle");
-    animateFromX("#pText", {delay: 0.3});
+    animateFromX("#pText", { delay: 0.3 });
   });
 </script>
