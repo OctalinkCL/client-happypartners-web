@@ -1,5 +1,11 @@
 ---
-import imageAbout from "../assets/about.jpg";
+import imageContact from "../assets/contact.webp";
+
+const title = "Hablemos de tus necesidades.";
+const text =
+  "Contáctanos para conocer más sobre nuestro proceso, nuestra misión o para obtener un presupuesto preciso para tu proyecto.";
+const textButton = "Escríbenos";
+const linkButton = "pespinoza@happypartners.cl";
 ---
 
 <section id="action" class="lg:py-12">
@@ -8,24 +14,20 @@ import imageAbout from "../assets/about.jpg";
   >
     <!-- content -->
     <div
-      class="absolute w-full h-full flex flex-col justify-center px-4 z-30 md:bg-deeplum md:relative md:h-96 md:px-18"
+      class="absolute w-full h-full flex flex-col justify-center px-4 z-30 md:bg-deeplum md:relative md:h-96 md:px-18 text-white"
     >
       <!-- title -->
-      <h3 class="font-display text-white text-4xl font-semibold mb-5">
-        Let’s discuss about your needs
-      </h3>
+      <h3 class="font-display text-4xl font-semibold mb-5">{title}</h3>
       <!-- text -->
-      <p class="text-white font-sora text-sm">
-        Contact us to know more about our process, our mission, or even to get a
-        precise quote of your project.
-      </p>
+      <p class="text-white font-sora text-sm">{text}</p>
       <!-- button -->
       <div class="pt-6 md:pt-12">
         <a
-          href="#"
+          href={`mailto:${linkButton}`}
           class="text-md text-violet-950 font-medium px-6 py-3.5 bg-lila rounded-full hover:bg-purple-400 transition"
-          >Contact us</a
         >
+          {textButton}
+        </a>
       </div>
     </div>
 
@@ -34,6 +36,10 @@ import imageAbout from "../assets/about.jpg";
       class="absolute w-full h-full bg-linear-to-t from-deeplum to-black/0 lg:w-1/2 right-0 z-20 md:bg-linear-to-r"
     >
     </div>
-    <img src={imageAbout.src} alt="image" class="w-full h-full object-cover" />
+    <img
+      src={imageContact.src}
+      alt="image"
+      class="w-full h-full object-cover"
+    />
   </div>
 </section>
