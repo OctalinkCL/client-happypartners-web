@@ -1,5 +1,6 @@
 ---
 import imageContact from "../assets/contact.webp";
+import imageContactAlt from "../assets/contact_alt.webp";
 
 const title = "Hablemos de tus necesidades.";
 const text =
@@ -33,13 +34,18 @@ const linkButton = "pespinoza@happypartners.cl";
 
     <!-- maskColor -->
     <div
-      class="absolute w-full h-full bg-linear-to-t from-deeplum to-black/0 lg:w-1/2 right-0 z-20 md:bg-linear-to-r"
+      class="absolute w-full h-full bg-linear-to-t from-deeplum to-black/0 lg:w-1/2 right-0 z-20 md:bg-none"
     >
     </div>
     <img
       src={imageContact.src}
       alt="image"
-      class="w-full h-full object-cover"
+      class="w-full h-full object-cover lg:hidden"
+    />
+    <img
+      src={imageContactAlt.src}
+      alt="image"
+      class="w-full h-full object-cover hidden lg:block"
     />
   </div>
 </section>

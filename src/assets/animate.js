@@ -8,6 +8,22 @@ gsap.registerPlugin(SplitText);
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrambleTextPlugin)
 
+export function activateOnScroll(selector, offset = 0) {
+    const element = document.querySelector(selector);
+    if (!element) return;
+
+    function handleScroll() {
+        if (window.scrollY > offset) {
+            element.classList.add('active');
+        } else {
+            element.classList.remove('active');
+        }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Ejecutar una vez al cargar
+}
+
 export function animateFromX(selector, options = {}) {
     const el = document.querySelector(selector);
     if (el) {
@@ -51,3 +67,4 @@ export function heroSplitText(selector) {
         });
     });
 }
+

@@ -25,7 +25,35 @@
   @apply from-lila/30 to-lila/0;
 }
 
+/* Headre */
+#app-header {
+  @apply flex top-0 items-center justify-center h-16 z-[99] w-full fixed transition-all;
+}
+
+#app-header.active {
+  @apply bg-mango 
+}
+
+
+
+#app-header.active a {
+  @apply text-deeplum
+}
+
 /* Hero */
 #hero h1 span {
   @apply bg-deeplum text-white inline-block px-3.5 rounded-full my-1 font-semibold;
+}
+
+/* Splide */
+#why .splide .title {
+  @apply text-4xl text-sunset font-display font-semibold mb-3 lg:text-5xl;
+}
+
+#why .splide .subtitle {
+  @apply text-lg text-white/60 font-sora lg:text-4xl lg:leading-16;
+}
+
+#why .splide .subtitle span {
+  @apply text-white/100 font-medium;
 }

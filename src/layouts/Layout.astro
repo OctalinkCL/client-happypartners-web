@@ -13,9 +13,7 @@ import Footer from "./Footer.astro";
   </head>
   <body>
     <!-- navbar -->
-    <nav
-      class="flex top-0 items-center justify-center h-16 z-[99] w-full bg-lila sticky border-b border-white"
-    >
+    <nav id="app-header">
       <div class="container mx-auto px-4 w-full lg:px-0">
         <a href="#" class="text-xl font-semibold text-deeplum">
           HAPPY PARTNERS
@@ -27,5 +25,12 @@ import Footer from "./Footer.astro";
 
     <!-- footer -->
     <Footer />
+
+    <script>
+      import { activateOnScroll } from "../assets/animate.js";
+      window.addEventListener("DOMContentLoaded", () => {
+        activateOnScroll("#app-header", 50);
+      });
+    </script>
   </body>
 </html>
