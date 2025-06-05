@@ -3,14 +3,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-hp-200: #F7EFDE;
+  --color-hp-200: #f7efde;
   --font-display: "Bricolage Grotesque", "sans-serif";
   --font-sora: "Sora", sans-serif;
-  --color-deeplum: #482F57;
-  --color-lila: #E4CEFF;
-  --color-mango: #FFB532;
-  --color-sunset: #FF6835;
-  --color-midnight: #00335E
+  --color-deeplum: #482f57;
+  --color-lila: #e4ceff;
+  --color-mango: #ffb532;
+  --color-sunset: #ff6835;
+  --color-midnight: #00335e;
 }
 
 .gradient-word {
@@ -31,13 +31,11 @@
 }
 
 #app-header.active {
-  @apply bg-mango 
+  @apply bg-mango;
 }
 
-
-
 #app-header.active a {
-  @apply text-deeplum
+  @apply text-deeplum;
 }
 
 /* Hero */
@@ -56,4 +54,12 @@
 
 #why .splide .subtitle span {
   @apply text-white/100 font-medium;
+}
+
+.text-span {
+  @apply bg-deeplum text-white px-3 py-1 rounded-full font-bold;
+}
+
+.hap-wrap {
+  @apply mx-auto px-4 lg:px-0 lg:w-7xl;
 }

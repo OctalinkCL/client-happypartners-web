@@ -1,0 +1,128 @@
+---
+import Layout from "../layouts/Layout.astro";
+import imageAbout from "../assets/about1.webp";
+---
+
+<Layout>
+  <div class="pt-12">
+    <!-- firstSection -->
+    <section class="bg-lila">
+      <div class="hap-wrap">
+        <!-- Titile -->
+        <div class="pt-12 pb-21 | lg:pt-24">
+          <h1
+            class="text-center font-sora font-semibold text-deeplum text-3xl | lg:text-7xl"
+          >
+            ¡Somos tu partner en felicidad organizacional!
+          </h1>
+        </div>
+        <!-- Content -->
+        <div class="grid | lg:grid-cols-2 gap-8 pb-8 | lg:pb-0">
+          <div>
+            <img
+              src={imageAbout.src}
+              alt="HappyPartner"
+              class="w-full rounded-xl"
+            />
+          </div>
+          <div
+            class="pt-6 text-sora text-deeplum text-xl font-medium | lg:text-lg | lg:pt-12"
+          >
+            <p class="mb-4">
+              Con más de como ingenieros <span class="text-span"
+                >20 años de experiencia</span
+              > comerciales en administración, gestión de recursos humanos y docencia,
+              somos conscientes del enorme poder de la felicidad y el bienestar en
+              el universo corporativo.
+            </p>
+            <p class="mb-4">
+              Desarrollamos estrategias para mantener <span class="text-span"
+                >altos niveles de felicidad</span
+              >
+              en los colaboradores de una organización, así como también, atraer
+              y retener el
+            </p>
+            <p>
+              El <span class="text-span">bienestar corporativo</span> ha dejado de
+              ser una tendencia, para convertirse en una necesidad inexcusable en
+              las empresas. Las nuevas generaciones demandan una forma de liderazgo
+              basada en el ser humano, que respete unos <span class="text-span"
+                >valores de plenitud personal y sostenibilidad.</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PersonalLeft -->
+    <section class="bg-hp-200 py-4 | lg:pt-24">
+      <div class="hap-wrap | lg:grid lg:grid-cols-2 lg:gap-18">
+        <div class="mb-6 | lg:mb-0">
+          <img
+            src="https://placehold.co/600x400"
+            class="w-full object-cover rounded-2xl"
+            alt="Image"
+          />
+        </div>
+        <div>
+          <h3
+            class="text-mango text-2xl font-sora font-bold mb-6 | lg:text-3xl"
+          >
+            Paulina Espinoza Sepúlveda
+          </h3>
+          <ul
+            class="text-deeplum text-md font-sora font-medium grid gap-3 list-disc ps-4 | lg:text-lg"
+          >
+            <li>
+              Chief Happiness Officer Certificada de Future of People Academy de
+              Barcelona
+            </li>
+            <li>Ingeniero Comercial | Universidad Autónoma de Chile</li>
+            <li>Contador Auditor | Universidad de la Frontera</li>
+            <li>
+              Empresaria y fundadora de ADCO Ltda. | Empresa de Servicios de
+              Administración
+            </li>
+            <li>Speaker de Inspiring Girls Chile</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PersonalLeft -->
+    <section class="bg-hp-200 pt-12 pb-6 | lg:py-24">
+      <div class="hap-wrap | lg:grid lg:grid-cols-2 lg:gap-18">
+        <div class="mb-6 | lg:mb-0 lg:order-2">
+          <img
+            src="https://placehold.co/600x400"
+            class="w-full object-cover rounded-2xl"
+            alt="Image"
+          />
+        </div>
+        <div>
+          <h3
+            class="text-deeplum text-2xl font-sora font-bold mb-6 | lg:text-3xl"
+          >
+            Carola Chandia Stehr
+          </h3>
+          <ul
+            class="text-sunset text-md font-sora font-medium grid gap-3 list-disc ps-4 | lg:text-lg"
+          >
+            <li>
+              Chief Happiness Officer Certificada de Future of People Academy de
+              Barcelona
+            </li>
+            <li>Ingeniero Comercial | Universidad Autónoma de Chile</li>
+            <li>Contador Auditor | Universidad de la Frontera</li>
+            <li>
+              Empresaria y fundadora de ADCO Ltda. | Empresa de Servicios de
+              Administración
+            </li>
+            <li>Speaker de Inspiring Girls Chile</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>

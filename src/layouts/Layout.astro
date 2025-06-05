@@ -1,7 +1,8 @@
 ---
 import Footer from "./Footer.astro";
 const currentPath = new URL(Astro.request.url).pathname;
-const isHome = currentPath !== '/';
+const isHome = currentPath !== "/";
+import "../styles/global.css";
 ---
 
 <!doctype html>
@@ -16,7 +17,7 @@ const isHome = currentPath !== '/';
   <body>
     <!-- navbar -->
     <nav id="app-header">
-      <div class="container mx-auto px-4 w-full lg:px-0">
+      <div class="mx-auto px-4 container lg:px-0">
         <a href="#" class="text-xl font-semibold text-deeplum">
           HAPPY PARTNERS
         </a>
@@ -27,7 +28,6 @@ const isHome = currentPath !== '/';
 
     <!-- footer -->
     {isHome && <Footer />}
-    
 
     <script>
       import { activateOnScroll } from "../assets/animate.js";
