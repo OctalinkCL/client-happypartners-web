@@ -49,7 +49,6 @@ export function scrambleText(selector) {
     });
 }
 
-
 export function heroSplitText(selector) {
     const element = document.querySelector(selector);
     if (!element) return;
@@ -68,3 +67,17 @@ export function heroSplitText(selector) {
     });
 }
 
+// About somos.astro
+export function aboutIntroImage(selector) {
+    const element = document.querySelector(selector);
+    if (!element) return;
+
+    gsap.from(element, {
+        opacity: 0,
+        duration: 0.5,
+        scrollTrigger: {
+            trigger: element,
+            start: "bottom 90%",
+        },
+    });
+}
