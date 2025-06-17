@@ -1,5 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+import avatarCarola from "../assets/caro.webp";
+import avatarPau from "../assets/pau.webp";
 ---
 
 <Layout>
@@ -16,9 +19,9 @@ import Layout from "../layouts/Layout.astro";
                     </h1>
                 </div>
                 <!-- Content -->
-                <div class="font-sora text-center text-xl lg:px-24">
+                <div class="font-sora text-center text-sm lg:px-24 | lg:text-2xl">
                     <p class="mb-4">
-                        Con más de <span class="text-span"
+                        Con más de <span class="text-span text-nowrap"
                             >20 años de experiencia</span
                         > como ingenieros comerciales en administración, gestión
                         de recursos humanos y docencia, somos conscientes del enorme
@@ -26,17 +29,17 @@ import Layout from "../layouts/Layout.astro";
                     </p>
                     <p class="mb-4">
                         Desarrollamos estrategias para mantener <span
-                            class="text-span">altos niveles de felicidad</span
+                            class="text-span text-nowrap">altos niveles de felicidad</span
                         >
                         en los colaboradores de una organización, así como también,
                         atraer y retener el
                     </p>
                     <p>
-                        El <span class="text-span">bienestar corporativo</span> ha
+                        El <span class="text-span text-nowrap">bienestar corporativo</span> ha
                         dejado de ser una tendencia, para convertirse en una necesidad
                         inexcusable en las empresas. Las nuevas generaciones demandan
                         una forma de liderazgo basada en el ser humano, que respete
-                        unos <span class="text-span"
+                        unos <span class="text-span text-nowrap"
                             >valores de plenitud personal y sostenibilidad.</span
                         >
                     </p>
@@ -50,7 +53,7 @@ import Layout from "../layouts/Layout.astro";
         <div class="hap-wrap | lg:grid lg:grid-cols-2 lg:gap-18">
             <div class="mb-6 | lg:mb-0">
                 <img
-                    src="https://placehold.co/600x400"
+                    src={avatarPau.src}
                     class="w-full object-cover rounded-2xl"
                     alt="Image"
                     id="personalOne"
@@ -66,8 +69,8 @@ import Layout from "../layouts/Layout.astro";
                     class="text-deeplum text-md font-sora font-medium grid gap-3 list-disc ps-4 | lg:text-lg"
                 >
                     <li>
-                        Chief Happiness Officer Certificada de Future of People
-                        Academy de Barcelona
+                        Chief Happiness Officer, UNIR, certificada por World
+                        Happiness Foundation (WHF)
                     </li>
                     <li>Ingeniero Comercial | Universidad Autónoma de Chile</li>
                     <li>Contador Auditor | Universidad de la Frontera</li>
@@ -86,7 +89,7 @@ import Layout from "../layouts/Layout.astro";
         <div class="hap-wrap | lg:grid lg:grid-cols-2 lg:gap-18">
             <div class="mb-6 | lg:mb-0 lg:order-2">
                 <img
-                    src="https://placehold.co/600x400"
+                    src={avatarCarola.src}
                     class="w-full object-cover rounded-2xl"
                     alt="Image"
                     id="personalTwo"
@@ -101,17 +104,20 @@ import Layout from "../layouts/Layout.astro";
                 <ul
                     class="text-deeplum text-md font-sora font-medium grid gap-3 list-disc ps-4 | lg:text-lg"
                 >
+                    <li>Ingeniero Comercial | Universidad de Concepción</li>
+                    <li>Coach Ontológico | Newfield Consulting</li>
                     <li>
-                        Chief Happiness Officer Certificada de Future of People
-                        Academy de Barcelona
+                        Diplomado en habilidades directivas | Newfield
+                        Consulting Diplomado Coaching para el Desarrollo de
+                        Competencias de Gestión y Liderazgo, IRADE
                     </li>
-                    <li>Ingeniero Comercial | Universidad Autónoma de Chile</li>
-                    <li>Contador Auditor | Universidad de la Frontera</li>
                     <li>
-                        Empresaria y fundadora de ADCO Ltda. | Empresa de
-                        Servicios de Administración
+                        Magister en Dirección de Recursos Humanos | ENEB ,
+                        España Formación en MBRS | Reducción de Estrés basado en
+                        Mindfulness | Universidad de Massachusetts
                     </li>
-                    <li>Speaker de Inspiring Girls Chile</li>
+                    <li>Cofundadora Más Bienestar Consultores</li>
+                    <li>Docente de Universidad Católica de la Santísima Concepción</li>
                 </ul>
             </div>
         </div>

@@ -63,15 +63,19 @@ const services = [
                 </div>
 
                 <!-- listServices -->
-                <ul class="text-deeplum flex flex-wrap gap-3 font-semibold">
+                <div class="text-deeplum flex flex-wrap gap-3 font-semibold">
                     {
                         services.map((item) => (
-                            <li class="text-lg bg-hp-200 px-6 py-2 rounded-4xl border-6 border-mango lg:text-xl">
+                            <a
+                                href="mailto:user@mail.com"
+                                target="_blank"
+                                class="text-lg w-full bg-hp-200 px-6 py-2 rounded-4xl border-6 border-mango lg:text-xl | md:hover:bg-mango transition md:w-auto"
+                            >
                                 {item}
-                            </li>
+                            </a>
                         ))
                     }
-                </ul>
+                </div>
             </div>
         </div>
     </div>
