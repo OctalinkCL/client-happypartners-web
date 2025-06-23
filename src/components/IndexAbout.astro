@@ -1,6 +1,5 @@
 ---
-import { map } from "astro:schema";
-import imageAbout from "../assets/about.jpg";
+import imageAbout from "../assets/about.jpeg";
 
 const text =
     "Con más de 20 años de experiencia como ingenieros comerciales en administración, gestión de recursos humanos y docencia, somos conscientes del enorme poder de la felicidad y el bienestar en el universo corporativo.";
@@ -18,11 +17,11 @@ const services = [
     <div class="container mx-auto px-4 lg:px-0">
         <div class="grid lg:grid-cols-7 lg:gap-16">
             <!-- image -->
-            <div class="mb-9 lg:mb-0 col-span-3">
+            <div class="mb-9 lg:mb-0 col-span-3 lg:ps-6">
                 <img
                     src={imageAbout.src}
                     alt="HappyPartner"
-                    class="w-full rounded-xl"
+                    class="w-full rounded-xl h-[180px] object-cover lg:h-[400px] | shadow-lg shadow-deeplum/20"
                 />
             </div>
             <!-- text -->
@@ -41,7 +40,7 @@ const services = [
                     class="text-orange-500 font-display text-3xl font-semibold mb-4 lg:text-5xl"
                 >
                     ¡Somos tus <span class="gradient-word amber">partner</span> en
-                    <span class="gradient-word amber">felicidad</span> organizacional!
+                    <span class="gradient-word amber">felicidad</span> corporativa!
                 </h2>
                 <!-- text -->
                 <div
@@ -67,7 +66,7 @@ const services = [
                     {
                         services.map((item) => (
                             <a
-                                href="mailto:user@mail.com"
+                                href="mailto:pespinoza@happypartners.cl"
                                 target="_blank"
                                 class="text-lg w-full bg-hp-200 px-6 py-2 rounded-4xl border-6 border-mango lg:text-xl | md:hover:bg-mango transition md:w-auto"
                             >
