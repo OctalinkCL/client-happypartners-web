@@ -5,136 +5,165 @@ import avatarCarola from "../assets/caro.webp";
 import avatarPau from "../assets/pau.webp";
 ---
 
+<script>
+  import { animateSvgUnderlineOnce } from "../assets/animate.js";
+
+  animateSvgUnderlineOnce([
+    { selector: "#underline1", delay: 0 },
+    { selector: "#underline2", delay: 0.4 },
+  ]);
+</script>
+
 <Layout>
-    <div class="pt-12">
-        <!-- firstSection -->
-        <section class="bg-lila about-top hero-top bg-cover">
-            <div class="hap-wrap py-12 | lg:py-24">
-                <!-- Titile -->
-                <div class="mb-6 | lg:mb-12">
-                    <h1
-                        class="text-center font-sora font-semibold text-deeplum text-3xl | lg:text-7xl"
-                    >
-                        ¡Somos tu partner en felicidad corporativa!
-                    </h1>
-                </div>
-                <!-- Content -->
-                <div class="font-sora text-center text-sm lg:px-24 | lg:text-2xl">
-                    <p class="mb-4">
-                        Con más de <span class="text-span text-nowrap"
-                            >20 años de experiencia</span
-                        > como ingenieros comerciales en administración, gestión
-                        de recursos humanos y docencia, somos conscientes del enorme
-                        poder de la felicidad y el bienestar en el universo corporativo.
-                    </p>
-                    <p class="mb-4">
-                        Desarrollamos estrategias para mantener <span
-                            class="text-span text-nowrap">altos niveles de felicidad</span
-                        >
-                        en los colaboradores de una organización, así como también,
-                        atraer y retener el talento mediante estrategias enfocadas desde el bienestar.
-                    </p>
-                    <p>
-                        El <span class="text-span text-nowrap">bienestar corporativo</span> ha
-                        dejado de ser una tendencia, para convertirse en una necesidad
-                        inexcusable en las empresas. Las nuevas generaciones demandan
-                        una forma de liderazgo basada en el ser humano, que respete
-                        unos <span class="text-span text-nowrap"
-                            >valores de plenitud personal y sostenibilidad.</span
-                        >
-                    </p>
-                </div>
-            </div>
-        </section>
+  <div class="pt-12">
+    <!-- firstSection -->
+    <section class="bg-lila about-top hero-top bg-cover">
+      <div class="hap-wrap py-12 | lg:py-24">
+        <!-- Titile -->
+        <div class="mb-6 | lg:mb-12">
+          <h1
+            class="text-center font-sora font-semibold text-deeplum text-3xl | lg:text-7xl"
+          >
+            ¡Somos tu partner en <u class="underline-animation"
+              ><svg
+                id="underline1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 255 32.61"
+                ><path
+                  d="M5 14.11s54-8 125-9 120 5 120 5-200.5-5.5-239.5 17.5"
+                  class="stroke stroke-deeplum"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path></svg
+              >felicidad</u
+            >
+            <u class="underline-animation"><svg
+                id="underline2"
+                style="transform: rotateY(180deg);"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 255 32.61"
+                ><path
+                  d="M5 14.11s54-8 125-9 120 5 120 5-200.5-5.5-239.5 17.5"
+                  class="stroke stroke-deeplum"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path></svg
+              >corporativa</u>!
+          </h1>
+        </div>
+        <!-- Content -->
+        <div class="font-sora text-center text-sm lg:px-24 | lg:text-2xl">
+          <p class="mb-4">
+            Con más de <span class="text-span text-nowrap"
+              >20 años de experiencia</span
+            > como ingenieros comerciales en administración, gestión de recursos
+            humanos y docencia, somos conscientes del enorme poder de la felicidad
+            y el bienestar en el universo corporativo.
+          </p>
+          <p class="mb-4">
+            Desarrollamos estrategias para mantener <span
+              class="text-span text-nowrap">altos niveles de felicidad</span
+            >
+            en los colaboradores de una organización, así como también, atraer y
+            retener el talento mediante estrategias enfocadas desde el bienestar.
+          </p>
+          <p>
+            El <span class="text-span text-nowrap">bienestar corporativo</span> ha
+            dejado de ser una tendencia, para convertirse en una necesidad inexcusable
+            en las empresas. Las nuevas generaciones demandan una forma de liderazgo
+            basada en el ser humano, que respete unos <span
+              class="text-span text-nowrap"
+              >valores de plenitud personal y sostenibilidad.</span
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- PersonalLeft -->
+  <section class="bg-hp-200 py-4 | lg:pt-24">
+    <div class="hap-wrap | lg:grid lg:grid-cols-2 lg:gap-18">
+      <div class="mb-6 | lg:mb-0">
+        <img
+          src={avatarPau.src}
+          class="w-full object-cover rounded-2xl"
+          alt="Image"
+          id="personalOne"
+        />
+      </div>
+      <div>
+        <h3 class="text-mango text-2xl font-sora font-bold mb-6 | lg:text-3xl">
+          Paulina Espinoza Sepúlveda
+        </h3>
+        <ul
+          class="text-deeplum text-md font-sora font-medium grid gap-3 list-disc ps-4 | lg:text-lg"
+        >
+          <li>
+            Chief Happiness Officer, UNIR, certificada por World Happiness
+            Foundation (WHF)
+          </li>
+          <li>Ingeniero Comercial | Universidad Autónoma de Chile</li>
+          <li>Contador Auditor | Universidad de la Frontera</li>
+          <li>
+            Empresaria y fundadora de ADCO Ltda. | Empresa de Servicios de
+            Administración
+          </li>
+          <li>Speaker de Inspiring Girls Chile</li>
+        </ul>
+      </div>
     </div>
+  </section>
 
-    <!-- PersonalLeft -->
-    <section class="bg-hp-200 py-4 | lg:pt-24">
-        <div class="hap-wrap | lg:grid lg:grid-cols-2 lg:gap-18">
-            <div class="mb-6 | lg:mb-0">
-                <img
-                    src={avatarPau.src}
-                    class="w-full object-cover rounded-2xl"
-                    alt="Image"
-                    id="personalOne"
-                />
-            </div>
-            <div>
-                <h3
-                    class="text-mango text-2xl font-sora font-bold mb-6 | lg:text-3xl"
-                >
-                    Paulina Espinoza Sepúlveda
-                </h3>
-                <ul
-                    class="text-deeplum text-md font-sora font-medium grid gap-3 list-disc ps-4 | lg:text-lg"
-                >
-                    <li>
-                        Chief Happiness Officer, UNIR, certificada por World
-                        Happiness Foundation (WHF)
-                    </li>
-                    <li>Ingeniero Comercial | Universidad Autónoma de Chile</li>
-                    <li>Contador Auditor | Universidad de la Frontera</li>
-                    <li>
-                        Empresaria y fundadora de ADCO Ltda. | Empresa de
-                        Servicios de Administración
-                    </li>
-                    <li>Speaker de Inspiring Girls Chile</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- PersonalLeft -->
-    <section class="bg-hp-200 pt-12 pb-6 | lg:py-24">
-        <div class="hap-wrap | lg:grid lg:grid-cols-2 lg:gap-18">
-            <div class="mb-6 | lg:mb-0 lg:order-2">
-                <img
-                    src={avatarCarola.src}
-                    class="w-full object-cover rounded-2xl"
-                    alt="Image"
-                    id="personalTwo"
-                />
-            </div>
-            <div>
-                <h3
-                    class="text-mango text-2xl font-sora font-bold mb-6 | lg:text-3xl"
-                >
-                    Carola Chandia Stehr
-                </h3>
-                <ul
-                    class="text-deeplum text-md font-sora font-medium grid gap-3 list-disc ps-4 | lg:text-lg"
-                >
-                    <li>Ingeniero Comercial | Universidad de Concepción</li>
-                    <li>Coach Ontológico | Newfield Consulting</li>
-                    <li>
-                        Diplomado en habilidades directivas | Newfield
-                        Consulting Diplomado Coaching para el Desarrollo de
-                        Competencias de Gestión y Liderazgo, IRADE
-                    </li>
-                    <li>
-                        Magister en Dirección de Recursos Humanos | ENEB ,
-                        España Formación en MBRS | Reducción de Estrés basado en
-                        Mindfulness | Universidad de Massachusetts
-                    </li>
-                    <li>Cofundadora Más Bienestar Consultores</li>
-                    <li>Docente de Universidad Católica de la Santísima Concepción</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+  <!-- PersonalLeft -->
+  <section class="bg-hp-200 pt-12 pb-6 | lg:py-24">
+    <div class="hap-wrap | lg:grid lg:grid-cols-2 lg:gap-18">
+      <div class="mb-6 | lg:mb-0 lg:order-2">
+        <img
+          src={avatarCarola.src}
+          class="w-full object-cover rounded-2xl"
+          alt="Image"
+          id="personalTwo"
+        />
+      </div>
+      <div>
+        <h3 class="text-mango text-2xl font-sora font-bold mb-6 | lg:text-3xl">
+          Carola Chandia Stehr
+        </h3>
+        <ul
+          class="text-deeplum text-md font-sora font-medium grid gap-3 list-disc ps-4 | lg:text-lg"
+        >
+          <li>Ingeniero Comercial | Universidad de Concepción</li>
+          <li>Coach Ontológico | Newfield Consulting</li>
+          <li>
+            Diplomado en habilidades directivas | Newfield Consulting Diplomado
+            Coaching para el Desarrollo de Competencias de Gestión y Liderazgo,
+            IRADE
+          </li>
+          <li>
+            Magister en Dirección de Recursos Humanos | ENEB , España Formación
+            en MBRS | Reducción de Estrés basado en Mindfulness | Universidad de
+            Massachusetts
+          </li>
+          <li>Cofundadora Más Bienestar Consultores</li>
+          <li>Docente de Universidad Católica de la Santísima Concepción</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 </Layout>
 
 <script>
-    import { animateFromX } from "../assets/animate.js";
+  import { animateFromX } from "../assets/animate.js";
 
-    document.addEventListener("DOMContentLoaded", () => {
-        animateFromX("#personalOne");
-        animateFromX("#personalTwo");
-    });
+  document.addEventListener("DOMContentLoaded", () => {
+    animateFromX("#personalOne");
+    animateFromX("#personalTwo");
+  });
 </script>
 
 <style>
-    .about-top {
-        background-image: url(../assets/bg.webp);
-    }
+  .about-top {
+    background-image: url(../assets/bg.webp);
+  }
 </style>

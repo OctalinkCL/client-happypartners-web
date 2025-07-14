@@ -83,6 +83,7 @@ export function aboutIntroImage(selector) {
 }
 
 export function animateSvgUnderlineOnce(selectorsWithDelays = []) {
+    
     selectorsWithDelays.forEach(({ selector, delay = 0 }) => {
       const path = document.querySelector(`${selector} path`);
       if (!path) return;

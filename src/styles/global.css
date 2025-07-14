@@ -86,4 +86,8 @@
     stroke-dasharray: 822;
     stroke-dashoffset: 822;
   }
+
+  .stroke.stroke-deeplum {
+    stroke: var(--color-deeplum); 
+  }
 }
