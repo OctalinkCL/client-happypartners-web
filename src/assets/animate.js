@@ -81,3 +81,31 @@ export function aboutIntroImage(selector) {
         },
     });
 }
+
+export function animateSvgUnderlineOnce(selectorsWithDelays = []) {
+    selectorsWithDelays.forEach(({ selector, delay = 0 }) => {
+      const path = document.querySelector(`${selector} path`);
+      if (!path) return;
+  
+      const length = path.getTotalLength();
+      path.style.strokeDasharray = length;
+      path.style.strokeDashoffset = length;
+  
+      gsap.fromTo(
+        path,
+        { strokeDashoffset: length },
+        {
+          strokeDashoffset: 0,
+          duration: 0.8,
+          delay,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: path.closest("h2"),
+            start: "top 80%",
+            toggleActions: "play none none none",
+            once: true,
+          },
+        }
+      );
+    });
+  }

@@ -2,86 +2,118 @@
 import imageAbout from "../assets/about.jpeg";
 
 const text =
-    "Con más de 20 años de experiencia como ingenieros comerciales en administración, gestión de recursos humanos y docencia, somos conscientes del enorme poder de la felicidad y el bienestar en el universo corporativo.";
+  "Con más de 20 años de experiencia como ingenieros comerciales en administración, gestión de recursos humanos y docencia, somos conscientes del enorme poder de la felicidad y el bienestar en el universo corporativo.";
 
 const services = [
-    "Talleres",
-    "Charlas",
-    "Cooaching grupal e individual",
-    "Neurofeedback",
-    "Hunting profesional",
+  "Talleres",
+  "Charlas",
+  "Cooaching grupal e individual",
+  "Neurofeedback",
+  "Hunting profesional",
 ];
 ---
 
+<script>
+    import { animateSvgUnderlineOnce } from "../assets/animate.js";
+  
+    animateSvgUnderlineOnce([
+      { selector: "#underline1", delay: 0 },
+      { selector: "#underline2", delay: 0.4 },
+    ]);
+  </script>
+
 <section id="about" class="bg-hp-200 py-12 lg:py-24 bg-cover">
-    <div class="container mx-auto px-4 lg:px-0">
-        <div class="grid lg:grid-cols-7 lg:gap-16">
-            <!-- image -->
-            <div class="mb-9 lg:mb-0 col-span-3 lg:ps-6">
-                <img
-                    src={imageAbout.src}
-                    alt="HappyPartner"
-                    class="w-full rounded-xl h-[180px] object-cover lg:h-[400px] | shadow-lg shadow-deeplum/20"
-                />
-            </div>
-            <!-- text -->
-            <div class="col-span-4">
-                <!-- uptitle -->
-                <div>
-                    <div
-                        class="text-deeplum inline-block italic font-semibold text-xl mb-4"
-                    >
-                        "Bienestar es la nueva lovemark: emociones que
-                        fidelizan."
-                    </div>
-                </div>
-                <!-- title -->
-                <h2
-                    class="text-orange-500 font-display text-3xl font-semibold mb-4 lg:text-5xl"
-                >
-                    ¡Somos tus <span class="gradient-word amber">partner</span> en
-                    <span class="gradient-word amber">felicidad</span> corporativa!
-                </h2>
-                <!-- text -->
-                <div
-                    class="font-sora text-md text-deeplum font-medium mb-6 grid gap-3"
-                >
-                    <p>{text}</p>
-                    <p class="">
-                        Desarrollamos estrategias para mantener altos niveles de
-                        felicidad en los colaboradores de una organización, así
-                        como también, atraer y retener el talento mediante
-                        estrategias enfocadas desde el bienestar.
-                    </p>
-
-                    <a
-                        href="/somos"
-                        class="bg-deeplum text-white text-center py-3 rounded-full | lg:w-1/4"
-                        >Saber más</a
-                    >
-                </div>
-
-                <!-- listServices -->
-                <div class="text-deeplum flex flex-wrap gap-3 font-semibold">
-                    {
-                        services.map((item) => (
-                            <a
-                                href="mailto:pespinoza@happypartners.cl"
-                                target="_blank"
-                                class="text-lg w-full bg-hp-200 px-6 py-2 rounded-4xl border-6 border-mango lg:text-xl | md:hover:bg-mango transition md:w-auto"
-                            >
-                                {item}
-                            </a>
-                        ))
-                    }
-                </div>
-            </div>
+  <div class="container mx-auto px-4 lg:px-0">
+    <div class="grid lg:grid-cols-7 lg:gap-16">
+      <!-- image -->
+      <div class="mb-9 lg:mb-0 col-span-3 lg:ps-6">
+        <img
+          src={imageAbout.src}
+          alt="HappyPartner"
+          class="w-full rounded-xl h-[180px] object-cover lg:h-[400px] | shadow-lg shadow-deeplum/20"
+        />
+      </div>
+      <!-- text -->
+      <div class="col-span-4">
+        <!-- uptitle -->
+        <div>
+          <div
+            class="text-deeplum inline-block italic font-semibold text-xl mb-4"
+          >
+            "Bienestar es la nueva lovemark: emociones que fidelizan."
+          </div>
         </div>
+        <!-- title -->
+        <h2
+          class="text-orange-500 font-display text-3xl font-semibold mb-4 lg:text-5xl"
+        >
+          ¡Somos tus <u class="underline-animation"
+            ><svg
+              id="underline1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 255 32.61"
+              ><path
+                d="M5 14.11s54-8 125-9 120 5 120 5-200.5-5.5-239.5 17.5"
+                class="stroke"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="10"></path></svg
+            >partner</u
+          > en <u class="underline-animation"
+            ><svg
+            style="transform: rotateY(180deg);"
+              id="underline2"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 255 32.61"
+              ><path
+                d="M5 14.11s54-8 125-9 120 5 120 5-200.5-5.5-239.5 17.5"
+                class="stroke"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="10"></path></svg
+            >Felicidad</u
+          > corporativa!
+        </h2>
+        <!-- text -->
+        <div class="font-sora text-md text-deeplum font-medium mb-6 grid gap-3">
+          <p>{text}</p>
+          <p class="">
+            Desarrollamos estrategias para mantener altos niveles de felicidad
+            en los colaboradores de una organización, así como también, atraer y
+            retener el talento mediante estrategias enfocadas desde el
+            bienestar.
+          </p>
+
+          <a
+            href="/somos"
+            class="bg-deeplum text-white text-center py-3 rounded-full | lg:w-1/4"
+            >Saber más</a
+          >
+        </div>
+
+        <!-- listServices -->
+        <div class="text-deeplum flex flex-wrap gap-3 font-semibold">
+          {
+            services.map((item) => (
+              <a
+                href="mailto:pespinoza@happypartners.cl"
+                target="_blank"
+                class="text-lg w-full bg-hp-200 px-6 py-2 rounded-4xl border-6 border-mango lg:text-xl | md:hover:bg-mango transition md:w-auto"
+              >
+                {item}
+              </a>
+            ))
+          }
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
 <style>
-    #about {
-        background-image: url(../assets/bg_about_alt.webp);
-    }
+  #about {
+    background-image: url(../assets/bg_about_alt.webp);
+  }
 </style>

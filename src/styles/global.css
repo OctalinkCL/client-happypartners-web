@@ -63,3 +63,25 @@
 .hap-wrap {
   @apply mx-auto px-4 lg:px-0 lg:w-7xl;
 }
+
+/* Animations Underline */
+.underline-animation {
+  text-decoration: none;
+  position: relative;
+  white-space: nowrap;
+
+  svg {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .stroke {
+    stroke: var(--color-deeplum);
+    stroke-width: 0.15em;
+    stroke-dasharray: 822;
+    stroke-dashoffset: 822;
+  }
+}
