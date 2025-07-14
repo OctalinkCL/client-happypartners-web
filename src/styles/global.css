@@ -81,7 +81,7 @@
   }
 
   .stroke {
-    stroke: var(--color-deeplum);
+    /* stroke: var(--color-deeplum); */
     stroke-width: 0.15em;
     stroke-dasharray: 822;
     stroke-dashoffset: 822;
