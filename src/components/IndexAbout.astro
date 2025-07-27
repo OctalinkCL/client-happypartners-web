@@ -1,12 +1,37 @@
-<section class="bg-hp-200 px-4 py-6 | lg:px-0 lg:py-24">
+---
+const services = [
+  "Talleres",
+  "Charlas",
+  "Cooaching grupal e individual",
+  "Neurofeedback",
+  "Hunting profesional",
+];
+---
+
+<section id="about" class="bg-hp-200 px-4 py-6 | lg:px-0 lg:py-24">
   <div class="container mx-auto">
     <div class="grid | lg:grid-cols-7 lg:gap-18 lg:items-center">
       <!-- Image -->
-      <div class="md:col-span-3">
+      <div class="md:col-span-3 grid grid-cols-2 grid-rows-2 gap-3">
         <img
           src="https://placehold.co/600x400"
           alt="hap"
-          class="w-full rounded-2xl object-cover h-[200px] lg:h-[500px]"
+          class="w-full rounded object-cover h-[200px] lg:h-[200]"
+        />
+        <img
+          src="https://placehold.co/600x400"
+          alt="hap"
+          class="w-full rounded object-cover h-[200px] lg:h-[200]"
+        />
+        <img
+          src="https://placehold.co/600x400"
+          alt="hap"
+          class="w-full rounded object-cover h-[200px] lg:h-[200]"
+        />
+        <img
+          src="https://placehold.co/600x400"
+          alt="hap"
+          class="w-full rounded object-cover h-[200px] lg:h-[200]"
         />
       </div>
       <!-- Content -->
@@ -23,6 +48,7 @@
         >
           ¡Somos tu partner en Felicidad corporativa!
         </h2>
+        <!-- Text -->
         <p class="text-deeplum">
           Con más de 20 años de experiencia como ingenieros comerciales en
           administración, gestión de recursos humanos y docencia, somos
@@ -34,119 +60,26 @@
           los colaboradores de una organización, así como también, atraer y
           retener el talento mediante estrategias enfocadas desde el bienestar.
         </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ---
-import imageAbout from "../assets/image_web.jpeg";
-
-const text =
-  "Con más de 20 años de experiencia como ingenieros comerciales en administración, gestión de recursos humanos y docencia, somos conscientes del enorme poder de la felicidad y el bienestar en el universo corporativo.";
-
-const services = [
-  "Talleres",
-  "Charlas",
-  "Cooaching grupal e individual",
-  "Neurofeedback",
-  "Hunting profesional",
-];
----
-
-<script>
-  import { animateSvgUnderlineOnce } from "../assets/animate.js";
-
-  animateSvgUnderlineOnce([
-    { selector: "#underline5", delay: 0 },
-    { selector: "#underline6", delay: 0.4 },
-  ]);
-</script>
-
-<section id="about" class="bg-hp-200 py-12 lg:py-24 bg-cover">
-  <div class="container mx-auto px-4 lg:px-0">
-    <div class="grid lg:grid-cols-7 lg:gap-16">
-      <!-- image -->
-      <div class="mb-9 lg:mb-0 col-span-3 lg:ps-6">
-        <img
-          src={imageAbout.src}
-          alt="HappyPartner"
-          class="w-full rounded-xl h-[180px] object-cover lg:h-[400px] | shadow-lg shadow-deeplum/20"
-        />
-      </div>
-      <!-- text -->
-      <div class="col-span-4">
-        <!-- uptitle -->
-        <div>
-          <div
-            class="text-deeplum inline-block italic font-semibold text-xl mb-4"
-          >
-            "Bienestar es la nueva lovemark: emociones que fidelizan."
-          </div>
-        </div>
-        <!-- title -->
-        <h2
-          class="text-orange-500 font-display text-3xl font-semibold mb-4 lg:text-5xl"
+        <!-- Button -->
+        <a class="btn btn-deeplum inline-block mt-6" href="/somos">Saber Más</a>
+        <!-- List -->
+        <ul
+          class="flex flex-wrap text-lg gap-3 mt-6 text-deeplum font-semibold"
         >
-          ¡Somos tu <u class="underline-animation"
-          ><svg
-            id="underline5"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 255 32.61"
-            ><path
-              d="M5 14.11s54-8 125-9 120 5 120 5-200.5-5.5-239.5 17.5"
-               class="stroke stroke-deeplum"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"></path></svg
-          >partner</u
-        > en <u class="underline-animation"
-            ><svg
-              style="transform: rotateY(180deg);"
-              id="underline6"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 255 32.61"
-              ><path
-                d="M5 14.11s54-8 125-9 120 5 120 5-200.5-5.5-239.5 17.5"
-                class="stroke stroke-deeplum"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="10"></path></svg
-            >Felicidad</u
-          > corporativa!
-        </h2>
-        <!-- text -->
-        <div class="font-sora text-md text-deeplum font-medium mb-6 grid gap-3">
-          <p>{text}</p>
-          <p class="">
-            Desarrollamos estrategias para mantener altos niveles de felicidad
-            en los colaboradores de una organización, así como también, atraer y
-            retener el talento mediante estrategias enfocadas desde el
-            bienestar.
-          </p>
-
-          <a
-            href="/somos"
-            class="bg-deeplum text-white text-center py-3 rounded-full | lg:w-1/4"
-            >Saber más</a
-          >
-        </div>
-
-        <!-- listServices -->
-        <div class="text-deeplum flex flex-wrap gap-3 font-semibold">
           {
             services.map((item) => (
-              <a
-                href="mailto:contacto@happypartners.cl"
-                target="_blank"
-                class="text-lg w-full bg-hp-200 px-6 py-2 rounded-4xl border-6 border-mango lg:text-xl | md:hover:bg-mango transition md:w-auto"
-              >
-                {item}
-              </a>
+              <li>
+                <a
+                  target="_blank"
+                  href="mailto:contacto@happypartners.cl"
+                  class="block border-3 rounded-full py-2 px-6 border-mango transition | hover:bg-mango hover:text-amber-50"
+                >
+                  {item}
+                </a>
+              </li>
             ))
           }
-        </div>
+        </ul>
       </div>
     </div>
   </div>
@@ -156,4 +89,4 @@ const services = [
   #about {
     background-image: url(../assets/bg_about_alt.webp);
   }
-</style> -->
+</style>

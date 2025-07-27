@@ -88,6 +88,14 @@
   }
 
   .stroke.stroke-deeplum {
-    stroke: var(--color-deeplum); 
+    stroke: var(--color-deeplum);
   }
+}
+
+.btn {
+  @apply py-3 px-12 rounded-full font-medium text-sm
+}
+
+.btn.btn-deeplum {
+  @apply bg-deeplum text-white
 }
