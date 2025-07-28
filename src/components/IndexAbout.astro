@@ -1,4 +1,11 @@
 ---
+import TextUnderline from "./TextUnderline.astro";
+
+import image1 from "../assets/img/01.webp";
+import image2 from "../assets/img/02.webp";
+import image3 from "../assets/img/03.webp";
+import image4 from "../assets/img/04.webp";
+
 const services = [
   "Talleres",
   "Charlas",
@@ -8,34 +15,43 @@ const services = [
 ];
 ---
 
+<script>
+  import { animateSvgUnderlineOnce } from "../assets/animate.js";
+
+  animateSvgUnderlineOnce([
+    { selector: "#underline5", delay: 0 },
+    { selector: "#underline6", delay: 0.4 },
+  ]);
+</script>
+
 <section id="about" class="bg-hp-200 px-4 py-6 | lg:px-0 lg:py-24">
   <div class="container mx-auto">
     <div class="grid | lg:grid-cols-7 lg:gap-18 lg:items-center">
       <!-- Image -->
       <div class="md:col-span-3 grid grid-cols-2 grid-rows-2 gap-3">
         <img
-          src="https://placehold.co/600x400"
+          src={image1.src}
           alt="hap"
-          class="w-full rounded object-cover h-[200px] lg:h-[200]"
+          class="w-full rounded object-cover h-[100px] lg:h-[200px]"
         />
         <img
-          src="https://placehold.co/600x400"
+          src={image2.src}
           alt="hap"
-          class="w-full rounded object-cover h-[200px] lg:h-[200]"
+          class="w-full rounded object-cover h-[100px] lg:h-[200px]"
         />
         <img
-          src="https://placehold.co/600x400"
+          src={image3.src}
           alt="hap"
-          class="w-full rounded object-cover h-[200px] lg:h-[200]"
+          class="w-full rounded object-cover h-[100px] lg:h-[200px]"
         />
         <img
-          src="https://placehold.co/600x400"
+          src={image4.src}
           alt="hap"
-          class="w-full rounded object-cover h-[200px] lg:h-[200]"
+          class="w-full rounded object-cover h-[100px] lg:h-[200px]"
         />
       </div>
       <!-- Content -->
-      <div class="md:col-span-4">
+      <div class="md:col-span-4 mt-9 | lg:mt-0">
         <!-- subtitle -->
         <h5 class="text-deeplum text-xl font-medium leading-none | lg:text-2xl">
           <span class="text-sunset mr-2">✱</span>Bienestar es la nueva lovemark:
@@ -46,7 +62,17 @@ const services = [
         <h2
           class="text-3xl font-semibold text-sunset font-display my-4 | lg:text-5xl lg:my-9 lg:leading-13"
         >
-          ¡Somos tu partner en Felicidad corporativa!
+          ¡Somos tu <TextUnderline
+            text="partner"
+            id="underline5"
+            color="deeplum"
+            width="5"
+          /> en <TextUnderline
+            text="Felicidad"
+            id="underline6"
+            color="deeplum"
+            width="5"
+          /> corporativa!
         </h2>
         <!-- Text -->
         <p class="text-deeplum">

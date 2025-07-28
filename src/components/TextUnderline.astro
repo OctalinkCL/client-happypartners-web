@@ -1,0 +1,42 @@
+---
+const { text, id, color, width } = Astro.props;
+---
+
+<u class="text-underline-animation">
+    <svg id={id} viewBox="0 0 255 32.61">
+        <path
+            d="M5 14.11s54-8 125-9 120 5 120 5-200.5-5.5-239.5 17.5"
+            class={`stroke color-${color}`}
+            fill="none"
+            stroke-width={width}
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+    </svg>
+    {text}
+</u>
+
+<style>
+    .text-underline-animation {
+        text-decoration: none;
+        position: relative;
+        white-space: nowrap;
+
+        svg {
+            position: absolute;
+            top: 80%;
+            left: 0;
+            width: 100%;
+            height: auto;
+        }
+
+        .stroke {
+            stroke: aquamarine;
+            stroke-dasharray: 822;
+            stroke-dashoffset: 822;
+
+            &.color-deeplum {
+                stroke: var(--color-deeplum);
+            }
+        }
+    }
+</style>
