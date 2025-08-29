@@ -1,16 +1,20 @@
 ---
 import Footer from "./Footer.astro";
 import "../styles/global.css";
+
+const version = import.meta.env.BUILD_VERSION || Date.now();
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Happy Partners | Bienestar Organizacional</title>
+    <!-- STYLES_DOC -->
+    <link rel="stylesheet" href={`style.css?v=${version}`}>
   </head>
   <body>
     <!-- navbar -->
