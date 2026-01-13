@@ -1,4 +1,6 @@
 ---
+import { Analytics } from "@vercel/analytics/next";
+
 import Footer from "./Footer.astro";
 import "../styles/global.css";
 
@@ -14,7 +16,7 @@ const version = import.meta.env.BUILD_VERSION || Date.now();
     <meta name="generator" content={Astro.generator} />
     <title>Happy Partners | Bienestar Organizacional</title>
     <!-- STYLES_DOC -->
-    <link rel="stylesheet" href={`style.css?v=${version}`}>
+    <link rel="stylesheet" href={`style.css?v=${version}`} />
   </head>
   <body>
     <!-- navbar -->
@@ -134,5 +136,6 @@ const version = import.meta.env.BUILD_VERSION || Date.now();
         activateOnScroll("#app-header", 50);
       });
     </script>
+    <Analytics />
   </body>
 </html>
