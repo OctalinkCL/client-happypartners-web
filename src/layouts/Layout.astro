@@ -1,6 +1,4 @@
 ---
-import { Analytics } from "@vercel/analytics/next";
-
 import Footer from "./Footer.astro";
 import "../styles/global.css";
 
@@ -136,6 +134,5 @@ const version = import.meta.env.BUILD_VERSION || Date.now();
         activateOnScroll("#app-header", 50);
       });
     </script>
-    <Analytics />
   </body>
 </html>
